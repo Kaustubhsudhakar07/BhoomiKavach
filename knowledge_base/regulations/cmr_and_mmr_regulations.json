@@ -1,0 +1,56 @@
+[
+  {
+    "doc_id": "CMR-REG-111",
+    "title": "Coal Mines Regulations, 2017 — Regulation 111: Dimensions of Galleries",
+    "category": "Statutory Regulation",
+    "text": "Regulation 111 dictates the dimensions of workings. In any coal seam, the height of galleries shall not exceed 3.0 metres, and the width of galleries shall not exceed 4.8 metres, except with prior written permission of the Chief Inspector of Mines. Over-width galleries create excessive unsupported roof spans and drastically escalate tensile bending stress.",
+    "source": "Coal Mines Regulations, 2017 (Gazette of India)",
+    "page": "Section IV, Reg 111, Page 42",
+    "topics": ["gallery width", "gallery height", "over-width", "span", "statutory dimension"]
+  },
+  {
+    "doc_id": "CMR-REG-112",
+    "title": "Coal Mines Regulations, 2017 — Regulation 112: Depillaring Operations",
+    "category": "Statutory Regulation",
+    "text": "Regulation 112 specifies extraction of coal pillars (depillaring). Secondary extraction creates front and side abutment stress concentrations. Systematic withdrawal and erection of cogs, breaker props at the goaf edge, and strata monitoring must be strictly executed in compliance with permission conditions approved by the Directorate General of Mines Safety.",
+    "source": "Coal Mines Regulations, 2017 (Gazette of India)",
+    "page": "Section IV, Reg 112, Page 43",
+    "topics": ["depillaring", "pillar extraction", "goaf edge", "abutment stress", "caving"]
+  },
+  {
+    "doc_id": "CMR-REG-123",
+    "title": "Coal Mines Regulations, 2017 — Regulation 123: Support of Workings & Systematic Support Rules",
+    "category": "Statutory Regulation",
+    "text": "Regulation 123 mandates that the roof and sides of every working place shall be made secure. The owner, agent, and manager of every mine shall frame Systematic Support Rules (SSR) / Strata Control and Monitoring Plan (SCAMP) specifying the materials, pattern, and intervals of supports. No person shall be deployed under unsupported roof.",
+    "source": "Coal Mines Regulations, 2017 (Gazette of India)",
+    "page": "Section V, Reg 123, Page 48",
+    "topics": ["SSR", "SCAMP", "systematic support", "unsupported roof", "securing roof", "sides"]
+  },
+  {
+    "doc_id": "CMR-REG-125",
+    "title": "Coal Mines Regulations, 2017 — Regulation 125: Setting of Supports & Roof Bolting",
+    "category": "Statutory Regulation",
+    "text": "Regulation 125 governs the setting and testing of roof bolts and supports. Every prop, cog, and roof bolt shall be set securely and tested. Mechanized roof bolting with full-column resin or cement capsules must meet anchorage standards. Regular pull tests must verify that anchorage capacity conforms to approved design (>8-10 tonnes).",
+    "source": "Coal Mines Regulations, 2017 (Gazette of India)",
+    "page": "Section V, Reg 125, Page 50",
+    "topics": ["roof bolting", "support setting", "pull test", "resin capsule", "anchorage"]
+  },
+  {
+    "doc_id": "CMR-REG-129",
+    "title": "Coal Mines Regulations, 2017 — Regulation 129: Duties of Mining Sirdars & Overmen",
+    "category": "Statutory Regulation",
+    "text": "Regulation 129 stipulates that competent supervisory officials (Overmen and Mining Sirdars) shall carry out thorough inspections of the roof and sides of every working place and roadway before allowing work persons to enter. Sounding tests with a testing rod must be systematically conducted to detect hidden cracks and drummy strata.",
+    "source": "Coal Mines Regulations, 2017 (Gazette of India)",
+    "page": "Section VI, Reg 129, Page 54",
+    "topics": ["supervision", "mining sirdar", "overman", "sounding test", "inspection", "drummy roof"]
+  },
+  {
+    "doc_id": "MMR-REG-112",
+    "title": "Metalliferous Mines Regulations, 1961 — Regulation 112: Securing of Workings",
+    "category": "Statutory Regulation",
+    "text": "Regulation 112 of MMR 1961 mandates the securing of stopes, drives, crosscuts, and underground workings in metalliferous mines (copper, zinc, manganese, gold, uranium). Strict dress-down procedures, scaling bars, cable bolting in wide stopes, and ground movement monitoring are legally enforceable requirements.",
+    "source": "Metalliferous Mines Regulations, 1961 (DGMS)",
+    "page": "Chapter IX, Reg 112, Page 68",
+    "topics": ["metalliferous", "non-coal", "stope support", "dressing", "scaling", "cable bolting"]
+  }
+]

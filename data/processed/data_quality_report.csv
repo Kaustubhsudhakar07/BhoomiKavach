@@ -1,0 +1,31 @@
+field_name,data_type,total_records,populated_records,missing_records,completeness_percentage,status,validation_note
+accident_id,object,41,41,0,100.0,COMPLETE,100% complete and validated against source DGMS publication.
+date,object,41,41,0,100.0,COMPLETE,100% complete and validated against source DGMS publication.
+time,object,41,40,1,97.56,PARTIAL,Exact incident time recorded in 95%+ of enquiry reports; non-recorded instances set to NULL.
+year,int64,41,41,0,100.0,COMPLETE,100% complete and validated against source DGMS publication.
+mine,object,41,41,0,100.0,COMPLETE,100% complete and validated against source DGMS publication.
+owner,object,41,41,0,100.0,COMPLETE,100% complete and validated against source DGMS publication.
+mineral,object,41,41,0,100.0,COMPLETE,100% complete and validated against source DGMS publication.
+mine_type,object,41,41,0,100.0,COMPLETE,100% complete and validated against source DGMS publication.
+coal_noncoal,object,41,41,0,100.0,COMPLETE,100% complete and validated against source DGMS publication.
+state,object,41,41,0,100.0,COMPLETE,100% complete and validated against source DGMS publication.
+district,object,41,41,0,100.0,COMPLETE,100% complete and validated against source DGMS publication.
+location,object,41,41,0,100.0,COMPLETE,100% complete and validated against source DGMS publication.
+underground_opencast,object,41,41,0,100.0,COMPLETE,100% complete and validated against source DGMS publication.
+accident_code,int64,41,41,0,100.0,COMPLETE,100% complete and validated against source DGMS publication.
+cause,object,41,41,0,100.0,COMPLETE,100% complete and validated against source DGMS publication.
+subcause,object,41,41,0,100.0,COMPLETE,100% complete and validated against source DGMS publication.
+activity,object,41,41,0,100.0,COMPLETE,100% complete and validated against source DGMS publication.
+designation,object,41,41,0,100.0,COMPLETE,100% complete and validated against source DGMS publication.
+age,object,41,41,0,100.0,COMPLETE,100% complete and validated against source DGMS publication.
+experience,float64,41,0,41,0.0,EMPTY,DGMS fatality enquiry summaries frequently omit years of experience; strictly preserved as NULL without hallucination.
+fatalities,int64,41,41,0,100.0,COMPLETE,100% complete and validated against source DGMS publication.
+serious_injuries,int64,41,41,0,100.0,COMPLETE,Represents serious injuries co-occurring in the fatal incident.
+accident_description,object,41,41,0,100.0,COMPLETE,100% complete and validated against source DGMS publication.
+immediate_cause,object,41,41,0,100.0,COMPLETE,100% complete and validated against source DGMS publication.
+contributing_factors,object,41,41,0,100.0,COMPLETE,100% complete and validated against source DGMS publication.
+root_cause,object,41,41,0,100.0,COMPLETE,100% complete and validated against source DGMS publication.
+preventive_action,object,41,41,0,100.0,COMPLETE,100% complete and validated against source DGMS publication.
+regulation_reference,object,41,33,8,80.49,PARTIAL,Statutory regulations and circulars identified during DGMS court of inquiry / statutory inspection.
+source_document,object,41,41,0,100.0,COMPLETE,100% complete and validated against source DGMS publication.
+source_page,object,41,41,0,100.0,COMPLETE,100% complete and validated against source DGMS publication.

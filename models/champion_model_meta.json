@@ -1,0 +1,24 @@
+{
+  "champion_model_name": "Logistic Regression",
+  "metrics": {
+    "model": "Logistic Regression",
+    "balanced_accuracy": 0.7378,
+    "macro_f1": 0.7393,
+    "high_recall": 0.8077,
+    "critical_recall": 0.5556,
+    "precision": 0.7511,
+    "recall": 0.7378,
+    "pr_auc": 0.8525,
+    "false_negative_rate": 0.1311,
+    "training_time": 0.05,
+    "inference_time": 0.0,
+    "calibration_score": 0.0751,
+    "safety_composite_score": 0.73063
+  },
+  "selection_criteria": [
+    "HIGH/CRITICAL hazard recall prioritization",
+    "Minimization of catastrophic false negatives",
+    "Macro F1 and Balanced Accuracy balance",
+    "Probability calibration stability"
+  ]
+}

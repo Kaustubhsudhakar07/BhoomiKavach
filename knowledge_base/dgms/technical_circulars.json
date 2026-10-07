@@ -1,0 +1,38 @@
+[
+  {
+    "doc_id": "DGMS-CIRCULAR-2010-03",
+    "title": "DGMS (Tech) Circular No. 03 of 2010 — Strata Control and Monitoring Plan (SCAMP)",
+    "category": "DGMS Technical Circular",
+    "text": "Requires all underground coal mines to formulate and implement a comprehensive Strata Control and Monitoring Plan (SCAMP). Formally incorporates geotechnical classification (RMR by CMRI-ISM), dual-height tell-tales for bed separation measurement, continuous convergence monitoring, and trigger action response plans (TARP) when convergence rates exceed critical safety limits.",
+    "source": "DGMS Technical Circulars Compendium",
+    "page": "Circular 03/2010, pp. 12-18",
+    "topics": ["SCAMP", "RMR", "tell-tale", "bed separation", "TARP", "strata monitoring", "convergence"]
+  },
+  {
+    "doc_id": "DGMS-CIRCULAR-2013-06",
+    "title": "DGMS (Tech) Circular No. 06 of 2013 — Quality and Testing of Roof Bolts",
+    "category": "DGMS Technical Circular",
+    "text": "Prescribes standard specifications and routine destructive and non-destructive anchorage testing of resin-grouted roof bolts. Mandates minimum short-encapsulation pull load of 8 tonnes after 30 minutes and 12-15 tonnes after 24 hours. Pull tests must be conducted on at least 10% of installed bolts and documented in statutory registers.",
+    "source": "DGMS Technical Circulars Compendium",
+    "page": "Circular 06/2013, pp. 45-51",
+    "topics": ["roof bolts", "anchorage testing", "pull test", "resin capsule", "quality assurance"]
+  },
+  {
+    "doc_id": "DGMS-CIRCULAR-2018-02",
+    "title": "DGMS Circular No. 02 of 2018 — Elimination of Uncemented / Loose Props & Mechanised Bolting",
+    "category": "DGMS Technical Circular",
+    "text": "Stresses the total replacement of timber props by mechanized steel roof bolting with high-tensile rebar and resin encapsulation. Prohibits deploying workers within 6 metres of the freshly blasted face prior to temporary support erection or roof bolting rig operation.",
+    "source": "DGMS Technical Circulars Compendium",
+    "page": "Circular 02/2018, pp. 8-11",
+    "topics": ["mechanized bolting", "timber prop phase-out", "fresh face", "temporary support", "mechanization"]
+  },
+  {
+    "doc_id": "DGMS-CIRCULAR-2022-04",
+    "title": "DGMS Circular No. 04 of 2022 — Scientific Strata Management in Metal Mines",
+    "category": "DGMS Technical Circular",
+    "text": "Issues geotechnical guidelines for metalliferous underground operations including sub-level open stoping and cut-and-fill. Emphasizes acoustic emission monitoring, microseismic hazard zoning, and shotcreting with wire mesh in shear zones.",
+    "source": "DGMS Technical Circulars Compendium",
+    "page": "Circular 04/2022, pp. 22-26",
+    "topics": ["metal mines", "microseismic", "acoustic emission", "shotcrete", "wire mesh", "stoping"]
+  }
+]

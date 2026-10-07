@@ -1,0 +1,29 @@
+[
+  {
+    "doc_id": "DGMS-ALERT-RF-01",
+    "title": "DGMS Safety Alert: Hazards of Goaf Edge Support Setting During Depillaring",
+    "category": "Safety Alert",
+    "text": "Fatal accidents repeatedly occur when dressing crews or support mistrys enter the goaf edge under unsupported shale/sandstone roof to erect chocks or withdraw timber. Inquiry findings: Mandatory requirement for mobile canopy protection, breaker props set from secured vantage positions, and continuous sounding with extension rods.",
+    "source": "DGMS Directorate of Mines Safety Alerts",
+    "page": "Alert No. 12/2019, Page 2",
+    "topics": ["goaf edge", "breaker props", "chock erection", "depillaring", "dresser fatality"]
+  },
+  {
+    "doc_id": "DGMS-ALERT-RF-02",
+    "title": "DGMS Safety Alert: Hidden Slip Planes and Slickensides in Laminated Roof Strata",
+    "category": "Safety Alert",
+    "text": "Geological slip planes and slickensides frequently cause sudden detached falls without conventional audible warning signs (cracking/creaking). Visual inspection alone is insufficient. Mines must utilize strata endoscopes / bore inspection cameras and install tell-tales across bedding planes.",
+    "source": "DGMS Directorate of Mines Safety Alerts",
+    "page": "Alert No. 04/2021, Page 1",
+    "topics": ["slip plane", "slickenside", "hidden crack", "tell-tale", "endoscope", "sudden fall"]
+  },
+  {
+    "doc_id": "DGMS-ALERT-RF-03",
+    "title": "DGMS Safety Alert: Solid Blasting Dynamic Vibration and Secondary Delamination",
+    "category": "Safety Alert",
+    "text": "Solid blasting induces high ground vibrations (PPV > 10 mm/s) that weaken the bonding between immediate shale layers and main sandstone roof. Mandatory protocol: Minimum waiting period of 30 minutes after blasting, statutory ventilation clearance, and rigorous mechanical dressing before deploying drilling or loading crews.",
+    "source": "DGMS Directorate of Mines Safety Alerts",
+    "page": "Alert No. 08/2022, Page 3",
+    "topics": ["blasting", "vibration", "PPV", "dressing", "waiting period", "delamination"]
+  }
+]

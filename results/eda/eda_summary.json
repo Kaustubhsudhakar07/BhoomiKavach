@@ -1,0 +1,51 @@
+{
+  "total_accidents": 41,
+  "coal_accidents": 30,
+  "noncoal_accidents": 11,
+  "total_fatalities": 58,
+  "total_serious_injuries": 8,
+  "years_covered": [
+    2016,
+    2017,
+    2018,
+    2019,
+    2020,
+    2021,
+    2022
+  ],
+  "unique_states": [
+    "Chhattisgarh",
+    "Jharkhand",
+    "Karnataka",
+    "Madhya Pradesh",
+    "Maharashtra",
+    "Orissa",
+    "Rajasthan",
+    "Telangana",
+    "West Bengal"
+  ],
+  "unique_districts": 18,
+  "unique_mines": 36,
+  "unique_minerals": [
+    "Coal",
+    "Copper",
+    "Galena & Sphalerite",
+    "Gold",
+    "Manganese",
+    "Metalliferous",
+    "Uranium"
+  ],
+  "unique_owners": 12,
+  "mean_fatalities_per_accident": 1.41,
+  "max_fatalities_single_event": 4,
+  "mean_victim_age": 44.7,
+  "median_victim_age": 47.5,
+  "night_shift_accidents": 11,
+  "morning_shift_accidents": 20,
+  "evening_shift_accidents": 9,
+  "peak_year_accidents": 2016,
+  "peak_year_fatalities": 2016,
+  "major_accidents_1901_2022": 144,
+  "major_fatalities_1901_2022": 787,
+  "charts_generated": 14
+}

@@ -1,0 +1,211 @@
+{
+  "nodes": [
+    {
+      "id": "Mining_Depth",
+      "type": "Geology",
+      "desc": "Depth of Cover (m)"
+    },
+    {
+      "id": "RMR_Rating",
+      "type": "Geology",
+      "desc": "CMRI-ISM Rock Mass Rating (0-100)"
+    },
+    {
+      "id": "Geological_Discontinuities",
+      "type": "Geology",
+      "desc": "Slip planes, joints, slips"
+    },
+    {
+      "id": "Groundwater_Seepage",
+      "type": "Environmental",
+      "desc": "Water percolation, slaking"
+    },
+    {
+      "id": "Gallery_Span",
+      "type": "Mining_Geometry",
+      "desc": "Gallery width / 4-way diagonal span (m)"
+    },
+    {
+      "id": "Depillaring_Extraction",
+      "type": "Mining_Geometry",
+      "desc": "Active pillar extraction / goaf boundary"
+    },
+    {
+      "id": "Blasting_Intensity",
+      "type": "Operations",
+      "desc": "Solid blasting vibration & dynamic shock"
+    },
+    {
+      "id": "Abutment_Stress_Concentration",
+      "type": "Mechanics",
+      "desc": "High vertical induced stress near goaf/pillars"
+    },
+    {
+      "id": "Bed_Separation_Dilation",
+      "type": "Mechanics",
+      "desc": "Delamination between sandstone/shale layers"
+    },
+    {
+      "id": "Statutory_Supervision",
+      "type": "Human_Barrier",
+      "desc": "Sirdar/Overman pre-shift check (CMR 129)"
+    },
+    {
+      "id": "Dressing_Testing_Standard",
+      "type": "Human_Barrier",
+      "desc": "Sounding & dressing down loose rock (CMR 123)"
+    },
+    {
+      "id": "Support_Installation_Density",
+      "type": "Engineering_Barrier",
+      "desc": "Roof bolts / props installed to SSR (CMR 125)"
+    },
+    {
+      "id": "Support_Anchorage_Integrity",
+      "type": "Engineering_Barrier",
+      "desc": "Resin capsule anchorage & bolt load bearing capacity"
+    },
+    {
+      "id": "Unsupported_Exposure_Span",
+      "type": "Failure_State",
+      "desc": "Fresh face or wide span left unsupported"
+    },
+    {
+      "id": "Support_Overload_Failure",
+      "type": "Failure_State",
+      "desc": "Yielding, snapping, or dislodging of supports"
+    },
+    {
+      "id": "Personnel_In_Hazard_Zone",
+      "type": "Hazard_Exposure",
+      "desc": "Workers stationed under compromised strata"
+    },
+    {
+      "id": "ROOF_FALL_INCIDENT",
+      "type": "Terminal_Outcome",
+      "desc": "Fatal or Serious Fall of Roof (DGMS Code 0111)"
+    }
+  ],
+  "edges": [
+    {
+      "from": "Mining_Depth",
+      "to": "Abutment_Stress_Concentration",
+      "weight": 0.85,
+      "mechanism": "Higher overburden induces deeper stress abutments"
+    },
+    {
+      "from": "RMR_Rating",
+      "to": "Bed_Separation_Dilation",
+      "weight": -0.9,
+      "mechanism": "Lower RMR significantly increases layer delamination risk"
+    },
+    {
+      "from": "Geological_Discontinuities",
+      "to": "Bed_Separation_Dilation",
+      "weight": 0.88,
+      "mechanism": "Slip planes act as natural parting surfaces"
+    },
+    {
+      "from": "Groundwater_Seepage",
+      "to": "Bed_Separation_Dilation",
+      "weight": 0.75,
+      "mechanism": "Pore pressure reduces friction across bedding planes"
+    },
+    {
+      "from": "Gallery_Span",
+      "to": "Bed_Separation_Dilation",
+      "weight": 0.82,
+      "mechanism": "Wider span increases bending deflection and tensile failure"
+    },
+    {
+      "from": "Gallery_Span",
+      "to": "Unsupported_Exposure_Span",
+      "weight": 0.6,
+      "mechanism": "Excessive width strains standard support spacing"
+    },
+    {
+      "from": "Depillaring_Extraction",
+      "to": "Abutment_Stress_Concentration",
+      "weight": 0.95,
+      "mechanism": "Caving creates front & side abutment pressure zones"
+    },
+    {
+      "from": "Blasting_Intensity",
+      "to": "Bed_Separation_Dilation",
+      "weight": 0.8,
+      "mechanism": "Shock waves propagate micro-cracks into immediate roof"
+    },
+    {
+      "from": "Blasting_Intensity",
+      "to": "Support_Overload_Failure",
+      "weight": 0.7,
+      "mechanism": "Flyrock or ground vibration dislodges props/bolts"
+    },
+    {
+      "from": "Abutment_Stress_Concentration",
+      "to": "Support_Overload_Failure",
+      "weight": 0.85,
+      "mechanism": "Excessive rock load exceeds rated capacity of supports"
+    },
+    {
+      "from": "Bed_Separation_Dilation",
+      "to": "ROOF_FALL_INCIDENT",
+      "weight": 0.9,
+      "mechanism": "Separated slab detaches under self-weight"
+    },
+    {
+      "from": "Statutory_Supervision",
+      "to": "Dressing_Testing_Standard",
+      "weight": 0.9,
+      "mechanism": "Strict inspection enforces systematic sounding"
+    },
+    {
+      "from": "Statutory_Supervision",
+      "to": "Support_Installation_Density",
+      "weight": 0.85,
+      "mechanism": "Enforces adherence to approved Systematic Support Rules"
+    },
+    {
+      "from": "Statutory_Supervision",
+      "to": "Personnel_In_Hazard_Zone",
+      "weight": -0.8,
+      "mechanism": "Supervisors prevent worker entry into high-risk spots"
+    },
+    {
+      "from": "Dressing_Testing_Standard",
+      "to": "ROOF_FALL_INCIDENT",
+      "weight": -0.75,
+      "mechanism": "Eliminating loose flakes directly removes small fall hazard"
+    },
+    {
+      "from": "Support_Installation_Density",
+      "to": "Unsupported_Exposure_Span",
+      "weight": -0.95,
+      "mechanism": "Adequate bolt density eliminates unsupported spans"
+    },
+    {
+      "from": "Support_Anchorage_Integrity",
+      "to": "Support_Overload_Failure",
+      "weight": -0.9,
+      "mechanism": "High anchorage capacity prevents premature pullout"
+    },
+    {
+      "from": "Unsupported_Exposure_Span",
+      "to": "ROOF_FALL_INCIDENT",
+      "weight": 0.95,
+      "mechanism": "Direct fall of immediate stratum over exposed workers"
+    },
+    {
+      "from": "Support_Overload_Failure",
+      "to": "ROOF_FALL_INCIDENT",
+      "weight": 0.92,
+      "mechanism": "Catastrophic collapse once support barrier yields"
+    },
+    {
+      "from": "Personnel_In_Hazard_Zone",
+      "to": "ROOF_FALL_INCIDENT",
+      "weight": 0.88,
+      "mechanism": "Fatal outcome conditioned on physical presence"
+    }
+  ]
+}

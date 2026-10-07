@@ -1,0 +1,145 @@
+accident_id,date,year,mine,coal_noncoal,mineral,fatalities,serious_injuries,cause,subcause,raw_cause,source_document,source_page
+DGMS_MAJOR_COAL_005,1908-11-21,1908,North Kustore,Coal,Coal,7,0,Ground Movement,Fall of Roof,Fall of roof,SANKET Coal (Chapter 10: Major Accidents Since 1901),Page 299
+DGMS_MAJOR_COAL_006,1908-11-25,1908,North Kustore,Coal,Coal,8,0,Ground Movement,Fall of Roof,Fall of roof,SANKET Coal (Chapter 10: Major Accidents Since 1901),Page 299
+DGMS_MAJOR_COAL_008,1909-05-12,1909,Dhobidih,Coal,Coal,4,0,Ground Movement,Fall of Roof,Fall of roof,SANKET Coal (Chapter 10: Major Accidents Since 1901),Page 299
+DGMS_MAJOR_COAL_009,1909-05-29,1909,Sodepur,Coal,Coal,7,0,Ground Movement,Fall of Roof,Fall of roof,SANKET Coal (Chapter 10: Major Accidents Since 1901),Page 299
+DGMS_MAJOR_COAL_012,1910-03-10,1910,Kendwadih,Coal,Coal,4,0,Ground Movement,Fall of Roof,Fall of roof,SANKET Coal (Chapter 10: Major Accidents Since 1901),Page 299
+DGMS_MAJOR_COAL_013,1910-10-15,1910,Sitalpur,Coal,Coal,12,0,Ground Movement,Fall of Roof,Fall of roof,SANKET Coal (Chapter 10: Major Accidents Since 1901),Page 299
+DGMS_MAJOR_COAL_019,1913-03-02,1913,Barkui,Coal,Coal,6,1,Ground Movement,Fall of Roof,Fall of roof,SANKET Coal (Chapter 10: Major Accidents Since 1901),Page 299
+DGMS_MAJOR_COAL_025,1914-06-24,1914,Dhobidih,Coal,Coal,6,0,Ground Movement,Fall of Roof,Fall of Roof,SANKET Coal (Chapter 10: Major Accidents Since 1901),Page 299
+DGMS_MAJOR_COAL_030,1916-12-09,1916,Jamuria,Coal,Coal,4,0,Ground Movement,Fall of Roof,Fall of Roof,SANKET Coal (Chapter 10: Major Accidents Since 1901),Page 299
+DGMS_MAJOR_COAL_032,1919-05-17,1919,Bhuggutdih,Coal,Coal,4,1,Ground Movement,Fall of Roof,Fall of Roof,SANKET Coal (Chapter 10: Major Accidents Since 1901),Page 299
+DGMS_MAJOR_COAL_033,1919-09-25,1919,Nodhia,Coal,Coal,7,0,Ground Movement,Fall of Roof,Fall of Roof,SANKET Coal (Chapter 10: Major Accidents Since 1901),Page 299
+DGMS_MAJOR_COAL_034,1919-11-12,1919,Khas Jayrampur,Coal,Coal,6,1,Ground Movement,Fall of Roof,Fall of Roof,SANKET Coal (Chapter 10: Major Accidents Since 1901),Page 299
+DGMS_MAJOR_COAL_037,1920-05-11,1920,Loyabad,Coal,Coal,4,0,Ground Movement,Fall of Roof,Fall of Roof,SANKET Coal (Chapter 10: Major Accidents Since 1901),Page 300
+DGMS_MAJOR_COAL_042,1921-08-25,1921,Seebpore,Coal,Coal,4,0,Ground Movement,Fall of Roof,Fall of Roof,SANKET Coal (Chapter 10: Major Accidents Since 1901),Page 300
+DGMS_MAJOR_COAL_049,1923-02-20,1923,Raniganj,Coal,Coal,4,1,Ground Movement,Fall of Roof,Fall of Roof,SANKET Coal (Chapter 10: Major Accidents Since 1901),Page 300
+DGMS_MAJOR_COAL_051,1923-04-14,1923,Rawanwara,Coal,Coal,16,1,Ground Movement,Fall of Roof,Fall of Roof,SANKET Coal (Chapter 10: Major Accidents Since 1901),Page 300
+DGMS_MAJOR_COAL_054,1923-12-21,1923,Benahir,Coal,Coal,5,0,Ground Movement,Fall of Roof,Fall of Roof,SANKET Coal (Chapter 10: Major Accidents Since 1901),Page 300
+DGMS_MAJOR_COAL_055,1923-12-27,1923,Jharia Khas,Coal,Coal,5,0,Ground Movement,Fall of Roof,Fall of Roof,SANKET Coal (Chapter 10: Major Accidents Since 1901),Page 300
+DGMS_MAJOR_COAL_056,1924-03-28,1924,Khost,Coal,Coal,4,0,Ground Movement,Fall of Roof,Fall of Roof,SANKET Coal (Chapter 10: Major Accidents Since 1901),Page 300
+DGMS_MAJOR_COAL_059,1925-01-22,1925,Raniganj,Coal,Coal,5,0,Ground Movement,Fall of Roof,Fall of Roof,SANKET Coal (Chapter 10: Major Accidents Since 1901),Page 300
+DGMS_MAJOR_COAL_061,1926-01-28,1926,Chanch,Coal,Coal,5,0,Ground Movement,Fall of Roof,Fall of Roof,SANKET Coal (Chapter 10: Major Accidents Since 1901),Page 300
+DGMS_MAJOR_COAL_064,1928-10-30,1928,Sripur,Coal,Coal,4,1,Ground Movement,Fall of Roof,Fall of Roof,SANKET Coal (Chapter 10: Major Accidents Since 1901),Page 300
+DGMS_MAJOR_COAL_066,1929-04-09,1929,Sripur,Coal,Coal,4,0,Ground Movement,Fall of Roof,Fall of Roof,SANKET Coal (Chapter 10: Major Accidents Since 1901),Page 300
+DGMS_MAJOR_COAL_068,1929-07-20,1929,Sikdarpur,Coal,Coal,4,0,Ground Movement,Fall of Roof,Fall of Roof,SANKET Coal (Chapter 10: Major Accidents Since 1901),Page 300
+DGMS_MAJOR_COAL_069,1929-10-15,1929,Datla,Coal,Coal,4,2,Ground Movement,Fall of Roof,Fall of Roof,SANKET Coal (Chapter 10: Major Accidents Since 1901),Page 300
+DGMS_MAJOR_COAL_070,1929-11-19,1929,Serampur,Coal,Coal,5,0,Ground Movement,Fall of Roof,Fall of Roof,SANKET Coal (Chapter 10: Major Accidents Since 1901),Page 300
+DGMS_MAJOR_COAL_071,1929-12-10,1929,Lodna,Coal,Coal,5,1,Ground Movement,Fall of Roof,Fall of Roof,SANKET Coal (Chapter 10: Major Accidents Since 1901),Page 300
+DGMS_MAJOR_COAL_073,1930-04-08,1930,Deoli,Coal,Coal,6,0,Ground Movement,Fall of Roof,Fall of Roof,SANKET Coal (Chapter 10: Major Accidents Since 1901),Page 300
+DGMS_MAJOR_COAL_076,1931-11-24,1931,Sodepur 9 & 10 Pits,Coal,Coal,5,1,Ground Movement,Fall of Roof,Fall of Roof,SANKET Coal (Chapter 10: Major Accidents Since 1901),Page 301
+DGMS_MAJOR_COAL_078,1934-02-21,1934,Porpiapur,Coal,Coal,6,0,Ground Movement,Fall of Roof,Fall of Roof,SANKET Coal (Chapter 10: Major Accidents Since 1901),Page 301
+DGMS_MAJOR_COAL_079,1934-05-12,1934,Seebpur,Coal,Coal,5,0,Ground Movement,Fall of Roof,Fall of Roof,SANKET Coal (Chapter 10: Major Accidents Since 1901),Page 301
+DGMS_MAJOR_COAL_080,1934-07-16,1934,Khas Jharia,Coal,Coal,6,0,Ground Movement,Fall of Roof,Fall of Roof,SANKET Coal (Chapter 10: Major Accidents Since 1901),Page 301
+DGMS_MAJOR_COAL_088,1938-09-06,1938,Dhemo Main,Coal,Coal,9,0,Ground Movement,Fall of Roof,Fall of Roof,SANKET Coal (Chapter 10: Major Accidents Since 1901),Page 301
+DGMS_MAJOR_COAL_089,1940-01-05,1940,Kalithan Gurgaon,Coal,Coal,4,0,Ground Movement,Fall of Roof,Fall of Roof,SANKET Coal (Chapter 10: Major Accidents Since 1901),Page 301
+DGMS_MAJOR_COAL_090,1940-02-27,1940,Manksimula,Coal,Coal,6,0,Ground Movement,Fall of Roof,Fall of Roof,SANKET Coal (Chapter 10: Major Accidents Since 1901),Page 301
+DGMS_MAJOR_COAL_093,1940-12-04,1940,Ekra Khas,Coal,Coal,8,0,Ground Movement,Fall of Roof,Fall of Roof,SANKET Coal (Chapter 10: Major Accidents Since 1901),Page 301
+DGMS_MAJOR_COAL_094,1940-12-15,1940,Jitpur,Coal,Coal,4,0,Ground Movement,Fall of Roof,Fall of Roof,SANKET Coal (Chapter 10: Major Accidents Since 1901),Page 301
+DGMS_MAJOR_COAL_096,1941-04-24,1941,Dishergarh West,Coal,Coal,6,0,Ground Movement,Fall of Roof,Fall of Roof,SANKET Coal (Chapter 10: Major Accidents Since 1901),Page 301
+DGMS_MAJOR_COAL_097,1941-05-05,1941,South Bulliari Kendwadih,Coal,Coal,9,0,Ground Movement,Fall of Roof,Fall of Roof,SANKET Coal (Chapter 10: Major Accidents Since 1901),Page 301
+DGMS_MAJOR_COAL_098,1941-08-04,1941,Sodepur 9 & 10 Pits,Coal,Coal,4,0,Ground Movement,Fall of Roof,Fall of Roof,SANKET Coal (Chapter 10: Major Accidents Since 1901),Page 301
+DGMS_MAJOR_COAL_100,1942-01-16,1942,Kurhurbaree,Coal,Coal,5,5,Ground Movement,Fall of Roof,Fall of Roof,SANKET Coal (Chapter 10: Major Accidents Since 1901),Page 301
+DGMS_MAJOR_COAL_101,1942-02-12,1942,Ghogri-Berkui,Coal,Coal,4,0,Ground Movement,Fall of Roof,Fall of Roof,SANKET Coal (Chapter 10: Major Accidents Since 1901),Page 301
+DGMS_MAJOR_COAL_105,1942-11-27,1942,Jotejanaki Khas,Coal,Coal,6,0,Ground Movement,Fall of Roof,Fall of Roof,SANKET Coal (Chapter 10: Major Accidents Since 1901),Page 301
+DGMS_MAJOR_COAL_106,1943-02-22,1943,"Sodepur 9, 10 & 11 Pits",Coal,Coal,13,3,Ground Movement,Fall of Roof,Fall of Roof,SANKET Coal (Chapter 10: Major Accidents Since 1901),Page 301
+DGMS_MAJOR_COAL_110,1944-02-04,1944,Hurriladih,Coal,Coal,4,1,Ground Movement,Fall of Roof,Fall of Roof,SANKET Coal (Chapter 10: Major Accidents Since 1901),Page 301
+DGMS_MAJOR_COAL_113,1944-08-25,1944,Bright Jharia,Coal,Coal,4,0,Ground Movement,Fall of Roof,Fall of Roof,SANKET Coal (Chapter 10: Major Accidents Since 1901),Page 301
+DGMS_MAJOR_COAL_114,1944-09-07,1944,Dhemo Main,Coal,Coal,6,0,Ground Movement,Fall of Roof,Fall of Roof,SANKET Coal (Chapter 10: Major Accidents Since 1901),Page 302
+DGMS_MAJOR_COAL_119,1946-11-04,1946,Gazlitand,Coal,Coal,5,0,Ground Movement,Fall of Roof,Fall of Roof,SANKET Coal (Chapter 10: Major Accidents Since 1901),Page 302
+DGMS_MAJOR_COAL_120,1947-03-20,1947,Methani,Coal,Coal,4,1,Ground Movement,Fall of Roof,Fall of Roof,SANKET Coal (Chapter 10: Major Accidents Since 1901),Page 302
+DGMS_MAJOR_COAL_122,1948-05-19,1948,Jamuria A & B Pits,Coal,Coal,4,0,Ground Movement,Fall of Roof,Fall of Roof,SANKET Coal (Chapter 10: Major Accidents Since 1901),Page 302
+DGMS_MAJOR_COAL_127,1949-11-17,1949,New Satgram,Coal,Coal,6,3,Ground Movement,Fall of Roof,Fall of Roof,SANKET Coal (Chapter 10: Major Accidents Since 1901),Page 302
+DGMS_MAJOR_COAL_128,1950-02-25,1950,Rana,Coal,Coal,4,1,Ground Movement,Fall of Roof,Fall of Roof,SANKET Coal (Chapter 10: Major Accidents Since 1901),Page 302
+DGMS_MAJOR_COAL_129,1950-04-15,1950,Bhatdee,Coal,Coal,4,0,Ground Movement,Fall of Roof,Fall of Roof,SANKET Coal (Chapter 10: Major Accidents Since 1901),Page 302
+DGMS_MAJOR_COAL_130,1950-08-29,1950,Parbelia,Coal,Coal,4,0,Ground Movement,Fall of Roof,Fall of Roof,SANKET Coal (Chapter 10: Major Accidents Since 1901),Page 302
+DGMS_MAJOR_COAL_134,1951-05-31,1951,Methani,Coal,Coal,7,2,Ground Movement,Fall of Roof,Fall of Roof,SANKET Coal (Chapter 10: Major Accidents Since 1901),Page 302
+DGMS_MAJOR_COAL_135,1951-08-22,1951,East Bhalgora,Coal,Coal,4,0,Ground Movement,Fall of Roof,Fall of Roof,SANKET Coal (Chapter 10: Major Accidents Since 1901),Page 302
+DGMS_MAJOR_COAL_136,1952-02-22,1952,Dhemo Main,Coal,Coal,6,0,Ground Movement,Fall of Roof,Fall of Roof,SANKET Coal (Chapter 10: Major Accidents Since 1901),Page 302
+DGMS_MAJOR_COAL_139,1952-07-12,1952,Dhemo Main,Coal,Coal,12,0,Ground Movement,Fall of Roof,Fall of Roof,SANKET Coal (Chapter 10: Major Accidents Since 1901),Page 302
+DGMS_MAJOR_COAL_140,1952-09-17,1952,Bhatdee,Coal,Coal,5,0,Ground Movement,Fall of Roof,Fall of Roof,SANKET Coal (Chapter 10: Major Accidents Since 1901),Page 302
+DGMS_MAJOR_COAL_141,1952-11-19,1952,Pure Chirimiri,Coal,Coal,7,0,Ground Movement,Fall of Roof,Fall of Roof,SANKET Coal (Chapter 10: Major Accidents Since 1901),Page 302
+DGMS_MAJOR_COAL_143,1953-05-15,1953,Pure Chirimiri,Coal,Coal,8,1,Ground Movement,Fall of Roof,Fall of Roof,SANKET Coal (Chapter 10: Major Accidents Since 1901),Page 302
+DGMS_MAJOR_COAL_144,1953-07-05,1953,Bhulabararee,Coal,Coal,4,0,Ground Movement,Fall of Roof,Fall of Roof,SANKET Coal (Chapter 10: Major Accidents Since 1901),Page 302
+DGMS_MAJOR_COAL_145,1953-07-31,1953,Bejdih,Coal,Coal,4,0,Ground Movement,Fall of Roof,Fall of Roof,SANKET Coal (Chapter 10: Major Accidents Since 1901),Page 302
+DGMS_MAJOR_COAL_147,1953-08-23,1953,Dhemo Main,Coal,Coal,6,1,Ground Movement,Fall of Roof,Fall of Roof,SANKET Coal (Chapter 10: Major Accidents Since 1901),Page 302
+DGMS_MAJOR_COAL_149,1953-09-26,1953,Jhagrakhand,Coal,Coal,4,0,Ground Movement,Fall of Roof,Fall of Roof,SANKET Coal (Chapter 10: Major Accidents Since 1901),Page 302
+DGMS_MAJOR_COAL_150,1953-09-30,1953,Dhemo Main,Coal,Coal,4,0,Ground Movement,Fall of Roof,Fall of Roof,SANKET Coal (Chapter 10: Major Accidents Since 1901),Page 302
+DGMS_MAJOR_COAL_151,1954-01-08,1954,Swang,Coal,Coal,7,0,Ground Movement,Fall of Roof,Fall of Roof,SANKET Coal (Chapter 10: Major Accidents Since 1901),Page 302
+DGMS_MAJOR_COAL_152,1954-01-19,1954,Handiduah,Coal,Coal,4,0,Ground Movement,Fall of Roof,Fall of Roof,SANKET Coal (Chapter 10: Major Accidents Since 1901),Page 302
+DGMS_MAJOR_COAL_154,1954-04-02,1954,Kothagudium No. 3 Incline,Coal,Coal,5,0,Ground Movement,Fall of Roof,Fall of Roof,SANKET Coal (Chapter 10: Major Accidents Since 1901),Page 303
+DGMS_MAJOR_COAL_155,1954-06-16,1954,Monoharbahal,Coal,Coal,4,0,Ground Movement,Fall of Roof,Fall of Roof,SANKET Coal (Chapter 10: Major Accidents Since 1901),Page 303
+DGMS_MAJOR_COAL_156,1954-10-11,1954,Loyabad,Coal,Coal,4,0,Ground Movement,Fall of Roof,Fall of Roof,SANKET Coal (Chapter 10: Major Accidents Since 1901),Page 303
+DGMS_MAJOR_COAL_161,1955-07-14,1955,Kalimati,Coal,Coal,6,0,Ground Movement,Fall of Roof,Fall of Roof,SANKET Coal (Chapter 10: Major Accidents Since 1901),Page 303
+DGMS_MAJOR_COAL_162,1955-09-09,1955,Burradhemo,Coal,Coal,4,0,Ground Movement,Fall of Roof,Fall of Roof,SANKET Coal (Chapter 10: Major Accidents Since 1901),Page 303
+DGMS_MAJOR_COAL_163,1956-02-08,1956,Bhulabararee,Coal,Coal,4,1,Ground Movement,Fall of Roof,Fall of Roof,SANKET Coal (Chapter 10: Major Accidents Since 1901),Page 303
+DGMS_MAJOR_COAL_170,1958-10-09,1958,North Kujama,Coal,Coal,8,0,Ground Movement,Fall of Roof,Fall of Roof,SANKET Coal (Chapter 10: Major Accidents Since 1901),Page 303
+DGMS_MAJOR_COAL_173,1959-11-19,1959,Sripur 1 & 2 Pits,Coal,Coal,7,2,Ground Movement,Fall of Roof,Fall of Roof,SANKET Coal (Chapter 10: Major Accidents Since 1901),Page 303
+DGMS_MAJOR_COAL_175,1960-05-29,1960,Bachra,Coal,Coal,5,1,Ground Movement,Fall of Roof,Fall of Roof,SANKET Coal (Chapter 10: Major Accidents Since 1901),Page 303
+DGMS_MAJOR_COAL_177,1961-02-27,1961,Simlabahal,Coal,Coal,4,0,Ground Movement,Fall of Roof,Fall of Roof,SANKET Coal (Chapter 10: Major Accidents Since 1901),Page 303
+DGMS_MAJOR_COAL_178,1961-03-05,1961,Budroochuck,Coal,Coal,5,4,Ground Movement,Fall of Roof,Fall of Roof,SANKET Coal (Chapter 10: Major Accidents Since 1901),Page 303
+DGMS_MAJOR_COAL_179,1961-04-22,1961,East Kajora,Coal,Coal,5,1,Ground Movement,Fall of Roof,Fall of Roof,SANKET Coal (Chapter 10: Major Accidents Since 1901),Page 303
+DGMS_MAJOR_COAL_180,1961-05-06,1961,Datla West,Coal,Coal,4,0,Ground Movement,Fall of Roof,Fall of Roof,SANKET Coal (Chapter 10: Major Accidents Since 1901),Page 303
+DGMS_MAJOR_COAL_181,1961-06-10,1961,Burragarh,Coal,Coal,4,0,Ground Movement,Fall of Roof,Fall of Roof,SANKET Coal (Chapter 10: Major Accidents Since 1901),Page 303
+DGMS_MAJOR_COAL_182,1962-03-08,1962,Upper Mandra,Coal,Coal,5,0,Ground Movement,Fall of Roof,Fall of Roof,SANKET Coal (Chapter 10: Major Accidents Since 1901),Page 303
+DGMS_MAJOR_COAL_183,1962-03-23,1962,Sarpi Kajora,Coal,Coal,5,0,Ground Movement,Fall of Roof,Fall of Roof,SANKET Coal (Chapter 10: Major Accidents Since 1901),Page 303
+DGMS_MAJOR_COAL_184,1962-07-19,1962,Sitanala,Coal,Coal,6,1,Ground Movement,Fall of Roof,Fall of Roof,SANKET Coal (Chapter 10: Major Accidents Since 1901),Page 303
+DGMS_MAJOR_COAL_185,1962-08-24,1962,South Bulliari,Coal,Coal,6,0,Ground Movement,Fall of Roof,Fall of Roof,SANKET Coal (Chapter 10: Major Accidents Since 1901),Page 303
+DGMS_MAJOR_COAL_188,1963-03-21,1963,Jamuria A & B Pits,Coal,Coal,7,1,Ground Movement,Fall of Roof,Fall of Roof,SANKET Coal (Chapter 10: Major Accidents Since 1901),Page 303
+DGMS_MAJOR_COAL_192,1965-07-24,1965,Ena,Coal,Coal,7,0,Ground Movement,Fall of Roof,Fall of Roof,SANKET Coal (Chapter 10: Major Accidents Since 1901),Page 304
+DGMS_MAJOR_COAL_193,1965-11-08,1965,Rajnagar,Coal,Coal,5,1,Ground Movement,Fall of Roof,Fall of Roof,SANKET Coal (Chapter 10: Major Accidents Since 1901),Page 304
+DGMS_MAJOR_COAL_194,1966-01-11,1966,Lower Badjna,Coal,Coal,5,2,Ground Movement,Fall of Roof,Fall of Roof,SANKET Coal (Chapter 10: Major Accidents Since 1901),Page 304
+DGMS_MAJOR_COAL_195,1966-05-17,1966,Katras-Choitodih,Coal,Coal,8,1,Ground Movement,Fall of Roof,Fall of Roof,SANKET Coal (Chapter 10: Major Accidents Since 1901),Page 304
+DGMS_MAJOR_COAL_196,1967-01-16,1967,Gonshadih,Coal,Coal,4,0,Ground Movement,Fall of Roof,Fall of Roof,SANKET Coal (Chapter 10: Major Accidents Since 1901),Page 304
+DGMS_MAJOR_COAL_197,1967-01-16,1967,Laikdih Deep,Coal,Coal,4,0,Ground Movement,Fall of Roof,Fall of Roof,SANKET Coal (Chapter 10: Major Accidents Since 1901),Page 304
+DGMS_MAJOR_COAL_201,1969-11-21,1969,New Satgram,Coal,Coal,5,3,Ground Movement,Fall of Roof,Fall of Roof,SANKET Coal (Chapter 10: Major Accidents Since 1901),Page 304
+DGMS_MAJOR_COAL_202,1971-09-06,1971,Mudidih,Coal,Coal,4,1,Ground Movement,Fall of Roof,Fall of Roof,SANKET Coal (Chapter 10: Major Accidents Since 1901),Page 304
+DGMS_MAJOR_COAL_203,1971-12-24,1971,Kuya & Kuya Khas,Coal,Coal,4,0,Ground Movement,Fall of Roof,Fall of Roof,SANKET Coal (Chapter 10: Major Accidents Since 1901),Page 304
+DGMS_MAJOR_COAL_205,1973-05-03,1973,Bhowra South,Coal,Coal,4,1,Ground Movement,Fall of Roof,Fall of Roof,SANKET Coal (Chapter 10: Major Accidents Since 1901),Page 304
+DGMS_MAJOR_COAL_206,1974-01-11,1974,Handiduha,Coal,Coal,4,3,Ground Movement,Fall of Roof,Fall of Roof,SANKET Coal (Chapter 10: Major Accidents Since 1901),Page 304
+DGMS_MAJOR_COAL_207,1974-03-11,1974,Burhar No.1,Coal,Coal,7,0,Ground Movement,Fall of Roof,Fall of Roof,SANKET Coal (Chapter 10: Major Accidents Since 1901),Page 304
+DGMS_MAJOR_COAL_208,1974-05-16,1974,Parasea,Coal,Coal,4,1,Ground Movement,Fall of Roof,Fall of Roof,SANKET Coal (Chapter 10: Major Accidents Since 1901),Page 304
+DGMS_MAJOR_COAL_210,1975-01-10,1975,Kalyan Khani No.1,Coal,Coal,4,0,Ground Movement,Fall of Roof,Fall of Roof,SANKET Coal (Chapter 10: Major Accidents Since 1901),Page 304
+DGMS_MAJOR_COAL_212,1975-04-19,1975,Churcha,Coal,Coal,5,0,Ground Movement,Fall of Roof,Fall of Roof,SANKET Coal (Chapter 10: Major Accidents Since 1901),Page 304
+DGMS_MAJOR_COAL_213,1975-05-14,1975,Ara,Coal,Coal,5,0,Ground Movement,Fall of Roof,Fall of Roof,SANKET Coal (Chapter 10: Major Accidents Since 1901),Page 304
+DGMS_MAJOR_COAL_215,1975-08-08,1975,Kessurgarh,Coal,Coal,11,1,Ground Movement,Fall of Roof,Fall of Roof,SANKET Coal (Chapter 10: Major Accidents Since 1901),Page 304
+DGMS_MAJOR_COAL_218,1976-01-28,1976,Bellampalli 2 Incline,Coal,Coal,5,0,Ground Movement,Fall of Roof,Fall of Roof,SANKET Coal (Chapter 10: Major Accidents Since 1901),Page 304
+DGMS_MAJOR_COAL_220,1976-07-18,1976,Kalyan Khani No.5,Coal,Coal,4,1,Ground Movement,Fall of Roof,Fall of Roof,SANKET Coal (Chapter 10: Major Accidents Since 1901),Page 304
+DGMS_MAJOR_COAL_223,1978-03-31,1978,Tara,Coal,Coal,5,2,Ground Movement,Fall of Roof,Fall of Roof,SANKET Coal (Chapter 10: Major Accidents Since 1901),Page 304
+DGMS_MAJOR_COAL_225,1978-12-31,1978,Prakasam Khani No.2,Coal,Coal,6,3,Ground Movement,Fall of Roof,Fall of Roof,SANKET Coal (Chapter 10: Major Accidents Since 1901),Page 304
+DGMS_MAJOR_COAL_227,1979-10-09,1979,Bhanora,Coal,Coal,5,2,Ground Movement,Fall of Roof,Fall of Roof,SANKET Coal (Chapter 10: Major Accidents Since 1901),Page 304
+DGMS_MAJOR_COAL_228,1979-11-16,1979,Bankola,Coal,Coal,4,3,Ground Movement,Fall of Roof,Fall of Roof,SANKET Coal (Chapter 10: Major Accidents Since 1901),Page 304
+DGMS_MAJOR_COAL_230,1980-07-03,1980,Gopalichak,Coal,Coal,4,1,Ground Movement,Fall of Roof,Fall of Roof,SANKET Coal (Chapter 10: Major Accidents Since 1901),Page 304
+DGMS_MAJOR_COAL_232,1982-07-16,1982,Topa,Coal,Coal,16,4,Ground Movement,Fall of Roof,Fall of Roof,SANKET Coal (Chapter 10: Major Accidents Since 1901),Page 305
+DGMS_MAJOR_COAL_235,1985-06-09,1985,Somagudem 1,Coal,Coal,6,1,Ground Movement,Fall of Roof,Fall of Roof,SANKET Coal (Chapter 10: Major Accidents Since 1901),Page 305
+DGMS_MAJOR_COAL_236,1985-09-15,1985,Patherdih,Coal,Coal,4,1,Ground Movement,Fall of Roof,Fall of Roof,SANKET Coal (Chapter 10: Major Accidents Since 1901),Page 305
+DGMS_MAJOR_COAL_237,1985-10-14,1985,Kalyan Khani No.5,Coal,Coal,4,3,Ground Movement,Fall of Roof,Fall of Roof,SANKET Coal (Chapter 10: Major Accidents Since 1901),Page 305
+DGMS_MAJOR_COAL_239,1986-04-09,1986,Banki,Coal,Coal,4,0,Ground Movement,Fall of Roof,Fall of Roof,SANKET Coal (Chapter 10: Major Accidents Since 1901),Page 305
+DGMS_MAJOR_COAL_240,1986-04-20,1986,Satpura No.1,Coal,Coal,4,1,Ground Movement,Fall of Roof,Fall of Roof,SANKET Coal (Chapter 10: Major Accidents Since 1901),Page 305
+DGMS_MAJOR_COAL_241,1986-11-26,1986,Kenduadih,Coal,Coal,6,0,Ground Movement,Fall of Roof,Fall of Roof,SANKET Coal (Chapter 10: Major Accidents Since 1901),Page 305
+DGMS_MAJOR_COAL_242,1988-05-25,1988,North Jhagrakhand,Coal,Coal,4,0,Ground Movement,Fall of Roof,Fall of Roof,SANKET Coal (Chapter 10: Major Accidents Since 1901),Page 305
+DGMS_MAJOR_COAL_243,1988-06-18,1988,Dubeswari,Coal,Coal,4,0,Ground Movement,Fall of Roof,Fall of Roof,SANKET Coal (Chapter 10: Major Accidents Since 1901),Page 305
+DGMS_MAJOR_COAL_244,1989-06-30,1989,South Govindpur,Coal,Coal,5,2,Ground Movement,Fall of Roof,Fall of Roof,SANKET Coal (Chapter 10: Major Accidents Since 1901),Page 305
+DGMS_MAJOR_COAL_246,1990-10-18,1990,Dhanpuri Incline,Coal,Coal,4,1,Ground Movement,Fall of Roof,Fall of Roof,SANKET Coal (Chapter 10: Major Accidents Since 1901),Page 305
+DGMS_MAJOR_COAL_248,1994-01-18,1994,Mahabir Khani No.1,Coal,Coal,4,0,Ground Movement,Fall of Roof,Fall of Roof,SANKET Coal (Chapter 10: Major Accidents Since 1901),Page 305
+DGMS_MAJOR_COAL_250,1994-03-05,1994,Kotma West,Coal,Coal,6,1,Ground Movement,Fall of Roof,Fall of Roof,SANKET Coal (Chapter 10: Major Accidents Since 1901),Page 305
+DGMS_MAJOR_COAL_254,1996-01-05,1996,Kusunda,Coal,Coal,4,5,Ground Movement,Fall of Roof,Fall of Roof,SANKET Coal (Chapter 10: Major Accidents Since 1901),Page 305
+DGMS_MAJOR_COAL_255,1996-11-13,1996,Satgram Incline,Coal,Coal,4,0,Ground Movement,Fall of Roof,Fall of Roof,SANKET Coal (Chapter 10: Major Accidents Since 1901),Page 305
+DGMS_MAJOR_COAL_257,1997-10-18,1997,Sirka U/G,Coal,Coal,5,0,Ground Movement,Fall of Roof,Fall of Roof,SANKET Coal (Chapter 10: Major Accidents Since 1901),Page 305
+DGMS_MAJOR_COAL_258,1998-06-09,1998,Kuju,Coal,Coal,5,1,Ground Movement,Fall of Roof,Fall of Roof,SANKET Coal (Chapter 10: Major Accidents Since 1901),Page 305
+DGMS_MAJOR_COAL_260,2000-10-06,2000,Godavari Khani No.IX,Coal,Coal,5,0,Ground Movement,Fall of Roof,Fall of Roof,SANKET Coal (Chapter 10: Major Accidents Since 1901),Page 305
+DGMS_MAJOR_COAL_261,2000-11-03,2000,Dobary,Coal,Coal,4,1,Ground Movement,Fall of Roof,Fall of Roof,SANKET Coal (Chapter 10: Major Accidents Since 1901),Page 305
+DGMS_MAJOR_COAL_264,2001-03-05,2001,Durgapur Rayatwari,Coal,Coal,6,0,Ground Movement,Fall of Roof,Fall of Roof,SANKET Coal (Chapter 10: Major Accidents Since 1901),Page 305
+DGMS_MAJOR_COAL_266,2002-02-26,2002,Kalyan Khani No. II,Coal,Coal,5,1,Ground Movement,Fall of Roof,Fall of Roof,SANKET Coal (Chapter 10: Major Accidents Since 1901),Page 305
+DGMS_MAJOR_COAL_269,2003-10-17,2003,Godavari Khani No. 8A,Coal,Coal,10,2,Ground Movement,Fall of Roof,Fall of Roof,SANKET Coal (Chapter 10: Major Accidents Since 1901),Page 305
+DGMS_MAJOR_COAL_270,2005-11-22,2005,Busseriya,Coal,Coal,4,0,Ground Movement,Fall of Roof,Fall of Roof,SANKET Coal (Chapter 10: Major Accidents Since 1901),Page 305
+DGMS_MAJOR_COAL_273,2006-11-12,2006,Venkatesh Khani No. 7,Coal,Coal,4,2,Ground Movement,Fall of Roof,Fall of Roof,SANKET Coal (Chapter 10: Major Accidents Since 1901),Page 306
+DGMS_MAJOR_COAL_274,2006-11-30,2006,Shyamsundarpur,Coal,Coal,6,0,Ground Movement,Fall of Roof,Fall of Roof,SANKET Coal (Chapter 10: Major Accidents Since 1901),Page 306
+DGMS_MAJOR_COAL_278,2013-11-11,2013,Basantimata,Coal,Coal,4,2,Ground Movement,Fall of Roof,Fall of Roof,SANKET Coal (Chapter 10: Major Accidents Since 1901),Page 306
+DGMS_MAJOR_NONCOAL_001,2001-02-02,2001,A. Subha Naidy & Co. Mica,Non-Coal,Non-Coal,9,0,Ground Movement,Fall of Roof,Fall of Roof,SANKET Non-Coal (Chapter 10: Major Accidents Since 1901),Page 345
+DGMS_MAJOR_NONCOAL_002,2002-04-11,2002,Redhill Ruby,Non-Coal,Non-Coal,5,4,Ground Movement,Fall of Roof,Fall of Roof,SANKET Non-Coal (Chapter 10: Major Accidents Since 1901),Page 345
+DGMS_MAJOR_NONCOAL_010,2013-10-21,2013,North Anantapur Gold,Non-Coal,Non-Coal,7,0,Ground Movement,Fall of Roof,Fall of Roof,SANKET Non-Coal (Chapter 10: Major Accidents Since 1901),Page 345
+DGMS_MAJOR_NONCOAL_024,1929-05-16,1929,Bawdwin Silver-Lead-Zinc,Non-Coal,Non-Coal,10,0,Ground Movement,Fall of Roof,Fall of Roof,SANKET Non-Coal (Chapter 10: Major Accidents Since 1901),Page 345
+DGMS_MAJOR_NONCOAL_031,1940-10-05,1940,Porcupine Steatite,Non-Coal,Non-Coal,4,2,Ground Movement,Fall of Roof,Fall of Roof,SANKET Non-Coal (Chapter 10: Major Accidents Since 1901),Page 345
+DGMS_MAJOR_NONCOAL_054,1959-05-14,1959,Serima White Earth,Non-Coal,Non-Coal,4,2,Ground Movement,Fall of Roof,Fall of Roof,SANKET Non-Coal (Chapter 10: Major Accidents Since 1901),Page 346
+DGMS_MAJOR_NONCOAL_068,1972-06-20,1972,Balawali Mica,Non-Coal,Non-Coal,4,0,Ground Movement,Fall of Roof,Fall of Roof,SANKET Non-Coal (Chapter 10: Major Accidents Since 1901),Page 346

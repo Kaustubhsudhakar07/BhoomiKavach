@@ -1,0 +1,34 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+ENV/
+
+# Data & Models cache
+*.bin
+*.pkl
+*.joblib
+!models/*.joblib
+!models/similarity_index/*.bin
+!models/similarity_index/*.pkl
+!vector_store/faiss/*.bin
+!vector_store/faiss/*.pkl
+
+# Testing & Coverage
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Environment & IDE
+.env
+.vscode/
+.idea/
+.DS_Store
+
+# Scratch
+scratch/
+project_prompt.txt

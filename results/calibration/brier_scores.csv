@@ -1,0 +1,11 @@
+model,class_index,class_name,brier_score
+Logistic Regression,2,HIGH,0.0852
+XGBoost,2,HIGH,0.1122
+LightGBM,2,HIGH,0.1191
+CatBoost,2,HIGH,0.0966
+Weighted Ensemble,2,HIGH,0.1061
+Logistic Regression,3,CRITICAL,0.0168
+XGBoost,3,CRITICAL,0.021
+LightGBM,3,CRITICAL,0.0216
+CatBoost,3,CRITICAL,0.0164
+Weighted Ensemble,3,CRITICAL,0.0182
