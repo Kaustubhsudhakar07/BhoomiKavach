@@ -22,6 +22,7 @@ class AgentChatRequest(BaseModel):
     user_role: Optional[str] = Field(default="Supervisor", json_schema_extra={"example": "Safety Officer"})
     mine_context: Optional[Dict[str, Any]] = None
     session_id: Optional[str] = Field(default_factory=lambda: f"sess-{uuid.uuid4().hex[:8]}")
+    gemini_api_key: Optional[str] = Field(default=None, description="Optional Google Gemini API key for generative safety reasoning")
 
 
 @router.post("/chat")
@@ -34,7 +35,8 @@ def chat_with_agent(req: AgentChatRequest):
             query=req.query,
             user_role=req.user_role or "Supervisor",
             mine_context=req.mine_context,
-            session_id=sess_id
+            session_id=sess_id,
+            gemini_api_key=req.gemini_api_key
         )
 
         # 2. Record Session & Message in Database (Phase 26)
@@ -93,6 +95,7 @@ def chat_with_agent(req: AgentChatRequest):
             "rag_evidence": result.get("rag_evidence"),
             "role_recommendations": result.get("role_recommendations"),
             "critic_passed": result.get("critic_passed", True),
+            "gemini_powered": result.get("gemini_powered", False),
             "final_response": result.get("final_response"),
             "citations": result.get("citations", []),
             "audit_id": audit_id

@@ -22,6 +22,24 @@ from backend.app.api.routes import health, accidents, predict, rag, agent, audit
 @asynccontextmanager
 async def lifespan(app: FastAPI):
     init_database_tables()
+    # Pre-warm FAISS similarity & RAG encoders so UI requests are instantaneous
+    try:
+        from src.similarity.accident_matcher import AccidentSimilarityMatcher
+        from src.rag.rag_engine import LocalRagEngine
+        matcher = AccidentSimilarityMatcher()
+        matcher.load_index()
+        rag_eng = LocalRagEngine()
+        rag_eng.load_index()
+        print(f"[{settings.PROJECT_NAME}] Vector models & FAISS indices pre-warmed successfully.")
+    except Exception as e:
+        print(f"[{settings.PROJECT_NAME}] Pre-warm notice: {e}")
+
+    import os
+    if os.getenv("GEMINI_API_KEY"):
+        print(f"[{settings.PROJECT_NAME}] Google Gemini AI connected for safety decision support.")
+    else:
+        print(f"[{settings.PROJECT_NAME}] Gemini API Key not detected in env (operating with deterministic fallback).")
+
     print(f"[{settings.PROJECT_NAME}] FastAPI Server initialized on {settings.API_V1_STR}")
     yield
 

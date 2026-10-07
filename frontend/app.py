@@ -146,6 +146,21 @@ with st.sidebar:
         st.warning(f"⚠️ Backend: {health.get('status', 'Connecting...')}")
         st.caption("Ensure FastAPI is running on port 8000.")
 
+    st.markdown("---")
+    st.markdown("##### ✨ Google Gemini Safety AI")
+    default_gemini_key = os.getenv("GEMINI_API_KEY", "")
+    gemini_key_input = st.text_input(
+        "Gemini API Key",
+        value=st.session_state.get("gemini_api_key", default_gemini_key),
+        type="password",
+        help="Enter Google Gemini API key to activate generative multi-turn safety reasoning."
+    )
+    if gemini_key_input:
+        st.session_state["gemini_api_key"] = gemini_key_input
+        st.success("🟢 Gemini Generative AI Active")
+    else:
+        st.info("⚪ Deterministic Mode (Provide Gemini Key for AI Reasoning)")
+
     st.markdown("""
     <div style="font-size: 0.75rem; color: #64748B; margin-top: 20px;">
         DGMS Code: 0111 (Fall of Roof)<br>
@@ -475,16 +490,20 @@ elif nav_choice == "4. Historical DGMS Analytics":
         with colC:
             # Geographic Distribution
             df_st = pd.DataFrame(stats.get("accidents_by_state", []))
-            fig_st = px.bar(df_st, x="state", y="cnt", title="Geographic Distribution of Fatal Roof Falls by State",
-                            color="cnt", color_continuous_scale="Viridis")
+            y_col_st = "accidents" if "accidents" in df_st.columns else ("cnt" if "cnt" in df_st.columns else "fatalities")
+            fig_st = px.bar(df_st, x="state", y=y_col_st, title="Geographic Distribution of Fatal Roof Falls by State",
+                            color=y_col_st, color_continuous_scale="Viridis",
+                            labels={y_col_st: "Fatal Accidents", "state": "State"})
             fig_st.update_layout(paper_bgcolor="rgba(0,0,0,0)", plot_bgcolor="rgba(0,0,0,0)")
             st.plotly_chart(fig_st, use_container_width=True)
 
         with colD:
             # Mineral Distribution
             df_min = pd.DataFrame(stats.get("accidents_by_mineral", []))
-            fig_min = px.bar(df_min, x="mineral", y="cnt", title="Minerals Affected in Ground Movement Fatalities",
-                             color="cnt", color_continuous_scale="Cividis")
+            y_col_min = "accidents" if "accidents" in df_min.columns else ("cnt" if "cnt" in df_min.columns else "fatalities")
+            fig_min = px.bar(df_min, x="mineral", y=y_col_min, title="Minerals Affected in Ground Movement Fatalities",
+                             color=y_col_min, color_continuous_scale="Cividis",
+                             labels={y_col_min: "Fatal Accidents", "mineral": "Mineral"})
             fig_min.update_layout(paper_bgcolor="rgba(0,0,0,0)", plot_bgcolor="rgba(0,0,0,0)")
             st.plotly_chart(fig_min, use_container_width=True)
 
@@ -530,34 +549,73 @@ elif nav_choice == "5. Accident Similarity Search":
 
 
 # ==============================================================================
-# MODULE 6: REGULATORY RAG EVIDENCE
+# MODULE 6: REGULATORY RAG EVIDENCE & GEMINI SAFETY QA
 # ==============================================================================
 elif nav_choice == "6. Regulatory RAG Evidence":
     st.subheader("📚 Statutory & Technical Regulation RAG Engine")
-    st.write("Query Coal Mines Regulations (CMR 2017), Metalliferous Mines Regulations (MMR 1961), and DGMS Circulars.")
+    st.write("Query Coal Mines Regulations (CMR 2017), Metalliferous Mines Regulations (MMR 1961), and DGMS Technical Circulars.")
 
-    rag_q = st.text_input(
-        "Ask a Regulatory or Technical Question:",
-        value="What statutory regulations mandate support setting at the goaf edge in depillaring panels?"
-    )
+    tab_rag_search, tab_gemini_qa = st.tabs(["📖 Vector Clause Search", "✨ Ask Gemini Regulatory Advisor"])
 
-    if st.button("📖 Search Knowledge Base", use_container_width=True):
-        with st.spinner("Searching FAISS Regulatory Index..."):
-            try:
-                res = api.query_rag(rag_q, top_k=4)
-                evidence = res.get("evidence", [])
+    with tab_rag_search:
+        rag_q = st.text_input(
+            "Enter Regulatory or Technical Topic:",
+            value="What statutory regulations mandate support setting at the goaf edge in depillaring panels?"
+        )
 
-                for idx, ev in enumerate(evidence, 1):
-                    cat_color = "#3B82F6" if "Statutory" in ev.get("category", "") else "#10B981"
-                    st.markdown(f"""
-                    <div style="background: rgba(30, 41, 59, 0.6); border-left: 4px solid {cat_color}; padding: 14px; margin-bottom: 12px; border-radius: 6px;">
-                        <b>{ev.get('title')}</b> <span style="font-size: 0.8rem; background: #334155; padding: 2px 6px; border-radius: 4px;">{ev.get('category')}</span><br>
-                        <span style="font-size: 0.82rem; color: #94A3B8;">Source: {ev.get('source')} | {ev.get('page')} | Match Score: {ev.get('similarity_score', 0)*100:.1f}%</span><br><br>
-                        <span style="font-size: 0.9rem; color: #F1F5F9;">{ev.get('content')}</span>
-                    </div>
-                    """, unsafe_allow_html=True)
-            except Exception as e:
-                st.error(f"RAG query failed: {str(e)}")
+        if st.button("📖 Search Knowledge Base", use_container_width=True):
+            with st.spinner("Searching FAISS Regulatory Index..."):
+                try:
+                    res = api.query_rag(rag_q, top_k=4)
+                    evidence = res.get("evidence", [])
+                    st.markdown(f"##### Found {len(evidence)} matched statutory sections:")
+
+                    for idx, ev in enumerate(evidence, 1):
+                        cat_color = "#3B82F6" if "Statutory" in ev.get("category", "") else "#10B981"
+                        st.markdown(f"""
+                        <div style="background: rgba(30, 41, 59, 0.6); border-left: 4px solid {cat_color}; padding: 14px; margin-bottom: 12px; border-radius: 6px;">
+                            <b>{ev.get('title')}</b> <span style="font-size: 0.8rem; background: #334155; padding: 2px 6px; border-radius: 4px;">{ev.get('category')}</span><br>
+                            <span style="font-size: 0.82rem; color: #94A3B8;">Source: {ev.get('source')} | {ev.get('page')} | Match Score: {ev.get('similarity_score', 0)*100:.1f}%</span><br><br>
+                            <span style="font-size: 0.9rem; color: #F1F5F9;">{ev.get('content')}</span>
+                        </div>
+                        """, unsafe_allow_html=True)
+                except Exception as e:
+                    st.error(f"RAG query failed: {str(e)}")
+
+    with tab_gemini_qa:
+        st.markdown("##### 🤖 Grounded Safety Q&A with Google Gemini")
+        st.caption("Ask natural safety questions; Gemini synthesizes an authoritative answer directly backed by DGMS circulars and CMR 2017 regulations.")
+
+        qa_role = st.selectbox("Your Role for this inquiry:", ["Safety Officer", "Mining Sirdar", "Overman", "Mining Engineer", "Mine Manager"], key="qa_role")
+        gemini_q = st.text_area(
+            "Enter Mine Safety Question:",
+            value="What are the statutory requirements for Systematic Support Rules (SSR) and pull testing of resin bolts under DGMS Circular 06/2013?",
+            key="gemini_qa_input"
+        )
+
+        if st.button("✨ Ask Gemini Safety Advisor", use_container_width=True):
+            with st.spinner("Retrieving DGMS provisions and querying Google Gemini..."):
+                try:
+                    g_res = api.ask_rag_gemini(
+                        query=gemini_q,
+                        user_role=qa_role,
+                        gemini_api_key=st.session_state.get("gemini_api_key")
+                    )
+                    if g_res.get("gemini_powered"):
+                        st.success("✨ Synthesized via Google Gemini Generative AI (DGMS Grounded)")
+                    else:
+                        st.info("ℹ️ Synthesized via Deterministic Safety Knowledge Base (Add Gemini API Key in sidebar for Generative reasoning)")
+
+                    st.markdown("---")
+                    st.markdown(g_res.get("answer", ""))
+
+                    citations = g_res.get("citations", [])
+                    if citations:
+                        st.markdown("##### 📌 Statutory Citations:")
+                        for c in citations:
+                            st.markdown(f"- **{c.get('title')}** ({c.get('source')}, {c.get('page')})")
+                except Exception as e:
+                    st.error(f"Gemini Safety Q&A failed: {str(e)}")
 
 
 # ==============================================================================
@@ -578,22 +636,29 @@ elif nav_choice == "7. Agentic Safety Advisor":
     )
 
     if st.button("🚀 Invoke Agentic Decision Support", use_container_width=True):
-        with st.spinner("Executing LangGraph State Graph & Critic Validation..."):
+        with st.spinner("Executing LangGraph Multi-Agent Reasoning..."):
             try:
                 chat_res = api.chat_with_agent(
                     query=agent_query,
-                    user_role=user_role
+                    user_role=user_role,
+                    gemini_api_key=st.session_state.get("gemini_api_key")
                 )
 
                 st.markdown("---")
+                if chat_res.get("gemini_powered"):
+                    st.success("✨ Advisory Generated by Google Gemini AI (Grounded in DGMS Precedents & Regulations)")
+                else:
+                    st.info("ℹ️ Advisory Generated by BhoomiKavach Engine (Set Gemini Key in sidebar to activate Generative AI)")
+
                 st.markdown("#### Agentic Decision-Support Output")
-                st.code(chat_res.get("final_response", ""), language="markdown")
+                st.markdown(chat_res.get("final_response", ""))
 
                 st.markdown("##### Agent Artifact Traceability")
-                c1, c2, c3 = st.columns(3)
+                c1, c2, c3, c4 = st.columns(4)
                 c1.metric("Classified Intent", chat_res.get("intent", "N/A"))
                 c2.metric("Critic Validation", "PASSED" if chat_res.get("critic_passed") else "FAILED")
-                c3.metric("Audit Record", f"#{chat_res.get('audit_id', 0)}")
+                c3.metric("AI Engine", "Google Gemini" if chat_res.get("gemini_powered") else "Rule/Template")
+                c4.metric("Audit Record", f"#{chat_res.get('audit_id', 0)}")
 
             except Exception as e:
                 st.error(f"Agent execution failed: {str(e)}")

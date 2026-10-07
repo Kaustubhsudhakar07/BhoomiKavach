@@ -34,6 +34,10 @@ class AgentState(TypedDict):
     critic_notes: List[str]
     hallucination_warning: Optional[str]
 
+    # Gemini Integration
+    gemini_api_key: Optional[str]
+    gemini_powered: Optional[bool]
+
     # Final Output Response
     final_response: str
     citations: List[Dict[str, str]]

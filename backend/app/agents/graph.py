@@ -12,7 +12,7 @@ Constructs the full LangGraph state graph linking:
   - Critic & Safety Agent
 """
 
-from typing import Dict, Any
+from typing import Dict, Any, Optional
 from langgraph.graph import StateGraph, END
 from backend.app.agents.state import AgentState
 from backend.app.agents.router_agent import router_node
@@ -96,7 +96,8 @@ def run_agentic_workflow(
     query: str,
     user_role: str = "Supervisor",
     mine_context: Dict[str, Any] = None,
-    session_id: str = "default_session"
+    session_id: str = "default_session",
+    gemini_api_key: Optional[str] = None
 ) -> Dict[str, Any]:
     """
     Executes the multi-agent graph with user inputs and returns complete decision-support packet.
@@ -120,6 +121,8 @@ def run_agentic_workflow(
         "critic_passed": False,
         "critic_notes": [],
         "hallucination_warning": None,
+        "gemini_api_key": gemini_api_key,
+        "gemini_powered": False,
         "final_response": "",
         "citations": []
     }

@@ -34,33 +34,52 @@ class BhoomiApiClient:
 
     def search_similar_accidents(self, query: str, top_k: int = 5, filter_coal_noncoal: Optional[str] = None) -> Dict[str, Any]:
         payload = {"query": query, "top_k": top_k, "filter_coal_noncoal": filter_coal_noncoal}
-        resp = requests.post(f"{self.base_url}/accidents/similar", json=payload, timeout=10.0)
+        resp = requests.post(f"{self.base_url}/accidents/similar", json=payload, timeout=45.0)
         resp.raise_for_status()
         return resp.json()
 
     def predict_risk(self, observation: Dict[str, Any]) -> Dict[str, Any]:
-        resp = requests.post(f"{self.base_url}/predict/risk", json=observation, timeout=10.0)
+        resp = requests.post(f"{self.base_url}/predict/risk", json=observation, timeout=30.0)
         resp.raise_for_status()
         return resp.json()
 
     def query_rag(self, query: str, top_k: int = 4) -> Dict[str, Any]:
         payload = {"query": query, "top_k": top_k}
-        resp = requests.post(f"{self.base_url}/rag/query", json=payload, timeout=8.0)
+        resp = requests.post(f"{self.base_url}/rag/query", json=payload, timeout=30.0)
         resp.raise_for_status()
         return resp.json()
 
-    def chat_with_agent(self, query: str, user_role: str = "Supervisor", mine_context: Dict[str, Any] = None, session_id: str = None) -> Dict[str, Any]:
+    def ask_rag_gemini(self, query: str, user_role: str = "Safety Officer", top_k: int = 4, gemini_api_key: Optional[str] = None) -> Dict[str, Any]:
+        payload = {
+            "query": query,
+            "user_role": user_role,
+            "top_k": top_k,
+            "gemini_api_key": gemini_api_key
+        }
+        resp = requests.post(f"{self.base_url}/rag/ask", json=payload, timeout=60.0)
+        resp.raise_for_status()
+        return resp.json()
+
+    def chat_with_agent(
+        self,
+        query: str,
+        user_role: str = "Supervisor",
+        mine_context: Dict[str, Any] = None,
+        session_id: str = None,
+        gemini_api_key: Optional[str] = None
+    ) -> Dict[str, Any]:
         payload = {
             "query": query,
             "user_role": user_role,
             "mine_context": mine_context,
-            "session_id": session_id
+            "session_id": session_id,
+            "gemini_api_key": gemini_api_key
         }
-        resp = requests.post(f"{self.base_url}/agent/chat", json=payload, timeout=15.0)
+        resp = requests.post(f"{self.base_url}/agent/chat", json=payload, timeout=90.0)
         resp.raise_for_status()
         return resp.json()
 
     def get_audit_logs(self, limit: int = 50) -> Dict[str, Any]:
-        resp = requests.get(f"{self.base_url}/audit/logs", params={"limit": limit}, timeout=5.0)
+        resp = requests.get(f"{self.base_url}/audit/logs", params={"limit": limit}, timeout=10.0)
         resp.raise_for_status()
         return resp.json()

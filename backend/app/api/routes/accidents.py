@@ -77,10 +77,10 @@ def get_accident_statistics():
     by_sector = [{"sector": r[0], "accidents": r[1], "fatalities": r[2]} for r in c.fetchall()]
 
     c.execute("SELECT state, count(*) as cnt, sum(fatalities) FROM accidents GROUP BY state ORDER BY cnt DESC;")
-    by_state = [{"state": r[0], "accidents": r[1], "fatalities": r[2]} for r in c.fetchall()]
+    by_state = [{"state": r[0], "accidents": r[1], "cnt": r[1], "fatalities": r[2]} for r in c.fetchall()]
 
     c.execute("SELECT mineral, count(*) as cnt, sum(fatalities) FROM accidents GROUP BY mineral ORDER BY cnt DESC;")
-    by_mineral = [{"mineral": r[0], "accidents": r[1], "fatalities": r[2]} for r in c.fetchall()]
+    by_mineral = [{"mineral": r[0], "accidents": r[1], "cnt": r[1], "fatalities": r[2]} for r in c.fetchall()]
 
     conn.close()
     return {

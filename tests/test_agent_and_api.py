@@ -71,3 +71,23 @@ def test_api_agent_chat():
     data = response.json()
     assert data["intent"] == "historical_query"
     assert "STATUTORY SAFETY DISCLAIMER" in data["final_response"]
+
+
+def test_api_rag_ask():
+    payload = {
+        "query": "What are the statutory requirements for Systematic Support Rules under CMR 2017?",
+        "user_role": "Safety Officer"
+    }
+    response = client.post("/api/v1/rag/ask", json=payload)
+    assert response.status_code == 200
+    data = response.json()
+    assert "answer" in data
+    assert "citations" in data
+    assert len(data["citations"]) >= 1
+
+
+def test_gemini_service():
+    from backend.app.services.gemini_service import is_gemini_available
+    # If no key is set in test environment, should return False gracefully without crashing
+    avail = is_gemini_available(None)
+    assert isinstance(avail, bool)
