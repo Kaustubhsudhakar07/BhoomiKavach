@@ -47,8 +47,6 @@ st.set_page_config(
     initial_sidebar_state="expanded"
 )
 
-# Initialize background backend services (if running standalone)
-auto_start_local_backend()
 
 # ──────────────────────────────────────────────────────────────────────────────
 # 2. DESIGN SYSTEM & HUMAN-CRAFTED ENTERPRISE STYLING
@@ -1141,8 +1139,6 @@ def format_bhoomi_plot(fig, height=320, title=None):
 # ──────────────────────────────────────────────────────────────────────────────
 # 4. INITIALIZATION & SESSION MANAGEMENT
 # ──────────────────────────────────────────────────────────────────────────────
-# Ensure backend is active when running on Streamlit Cloud or standalone
-auto_start_local_backend()
 
 if "api_client" not in st.session_state or not hasattr(st.session_state.api_client, "is_remote"):
     st.session_state.api_client = BhoomiApiClient()
