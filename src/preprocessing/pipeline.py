@@ -24,6 +24,18 @@ from sklearn.impute import SimpleImputer
 from sklearn.compose import ColumnTransformer
 from sklearn.pipeline import Pipeline
 
+# Backward compatibility patch for unpickling ColumnTransformer across scikit-learn versions
+try:
+    import sklearn.compose._column_transformer
+    if not hasattr(sklearn.compose._column_transformer, "_RemainderColsList"):
+        from collections import UserList
+        class _RemainderColsList(UserList):
+            pass
+        sklearn.compose._column_transformer._RemainderColsList = _RemainderColsList
+except Exception:
+    pass
+
+
 MODELS_DIR = "models"
 os.makedirs(MODELS_DIR, exist_ok=True)
 

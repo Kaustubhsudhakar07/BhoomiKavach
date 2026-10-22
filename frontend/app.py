@@ -26,6 +26,17 @@ ROOT_DIR = Path(__file__).resolve().parent.parent
 if str(ROOT_DIR) not in sys.path:
     sys.path.insert(0, str(ROOT_DIR))
 
+# Backward compatibility patch for unpickling ColumnTransformer across scikit-learn versions
+try:
+    import sklearn.compose._column_transformer
+    if not hasattr(sklearn.compose._column_transformer, "_RemainderColsList"):
+        from collections import UserList
+        class _RemainderColsList(UserList):
+            pass
+        sklearn.compose._column_transformer._RemainderColsList = _RemainderColsList
+except Exception:
+    pass
+
 from frontend.api_client import BhoomiApiClient
 from frontend.backend_manager import auto_start_local_backend
 
