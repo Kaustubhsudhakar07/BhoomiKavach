@@ -47,6 +47,9 @@ st.set_page_config(
     initial_sidebar_state="expanded"
 )
 
+# Initialize background backend services (if running standalone)
+auto_start_local_backend()
+
 # ──────────────────────────────────────────────────────────────────────────────
 # 2. DESIGN SYSTEM & HUMAN-CRAFTED ENTERPRISE STYLING
 # ──────────────────────────────────────────────────────────────────────────────
@@ -1166,37 +1169,37 @@ if "preset_mine" not in st.session_state:
 # 5. SIDEBAR NAVIGATION & TELEMETRY
 # ──────────────────────────────────────────────────────────────────────────────
 MODULE_DIRECTORY = [
-    "2. Live Strata Risk Assessment",
-    "3. Model Explainability & SHAP",
-    "4. Historical DGMS Analytics",
-    "5. Accident Similarity Search",
-    "6. Regulatory RAG Evidence",
-    "7. AI Help",
-    "8. Safety Policy & Data Dictionary"
+    "1. Live Strata Risk Assessment",
+    "2. Model Explainability & SHAP",
+    "3. Historical DGMS Analytics",
+    "4. Accident Similarity Search",
+    "5. Regulatory RAG Evidence",
+    "6. AI Help",
+    "7. Safety Policy & Data Dictionary"
 ]
 
 MODULE_DISPLAY_MAP = {
-    "2. Live Strata Risk Assessment": "⚡ 2. Live Strata Risk",
-    "3. Model Explainability & SHAP": "🔍 3. Explainability & SHAP",
-    "4. Historical DGMS Analytics": "📊 4. DGMS Analytics",
-    "5. Accident Similarity Search": "🎯 5. Accident Matcher",
-    "6. Regulatory RAG Evidence": "📜 6. Regulatory RAG",
-    "7. AI Help": "✨ 7. AI Help",
-    "8. Safety Policy & Data Dictionary": "📖 8. Safety Policy"
+    "1. Live Strata Risk Assessment": "⚡ 1. Live Strata Risk",
+    "2. Model Explainability & SHAP": "🔍 2. Explainability & SHAP",
+    "3. Historical DGMS Analytics": "📊 3. DGMS Analytics",
+    "4. Accident Similarity Search": "🎯 4. Accident Matcher",
+    "5. Regulatory RAG Evidence": "📜 5. Regulatory RAG",
+    "6. AI Help": "✨ 6. AI Help",
+    "7. Safety Policy & Data Dictionary": "📖 7. Safety Policy"
 }
 
 MODULE_SIDEBAR_MAP = {
-    "2. Live Strata Risk Assessment": "⚡ 2. Strata Risk",
-    "3. Model Explainability & SHAP": "🔍 3. SHAP XAI",
-    "4. Historical DGMS Analytics": "📊 4. Analytics",
-    "5. Accident Similarity Search": "🎯 5. Matcher",
-    "6. Regulatory RAG Evidence": "📜 6. DGMS RAG",
-    "7. AI Help": "✨ 7. AI Help",
-    "8. Safety Policy & Data Dictionary": "📖 8. Policy"
+    "1. Live Strata Risk Assessment": "⚡ 1. Strata Risk",
+    "2. Model Explainability & SHAP": "🔍 2. SHAP XAI",
+    "3. Historical DGMS Analytics": "📊 3. Analytics",
+    "4. Accident Similarity Search": "🎯 4. Matcher",
+    "5. Regulatory RAG Evidence": "📜 5. DGMS RAG",
+    "6. AI Help": "✨ 6. AI Help",
+    "7. Safety Policy & Data Dictionary": "📖 7. Policy"
 }
 
 if "nav_choice" not in st.session_state:
-    st.session_state["nav_choice"] = "2. Live Strata Risk Assessment"
+    st.session_state["nav_choice"] = "1. Live Strata Risk Assessment"
 if "sidebar_nav_key" not in st.session_state:
     st.session_state["sidebar_nav_key"] = st.session_state["nav_choice"]
 if "top_nav_key" not in st.session_state:
@@ -1345,13 +1348,13 @@ top_sel = st.pills(
 if top_sel:
     st.session_state["nav_choice"] = top_sel
 
-nav_choice = st.session_state.get("nav_choice", "2. Live Strata Risk Assessment")
+nav_choice = st.session_state.get("nav_choice", "1. Live Strata Risk Assessment")
 
 
 # ==============================================================================
-# MODULE 2: LIVE STRATA RISK ASSESSMENT (CORE OPERATIONAL RADAR)
+# MODULE 1: LIVE STRATA RISK ASSESSMENT (CORE OPERATIONAL RADAR)
 # ==============================================================================
-if nav_choice == "2. Live Strata Risk Assessment":
+if nav_choice == "1. Live Strata Risk Assessment":
     st.markdown("### Geotechnical Hazard Radar & Inference Cockpit")
     st.caption("Input live strata convergence, installed support parameters, and mining geometry for prospective evaluation.")
 
@@ -1813,9 +1816,9 @@ if nav_choice == "2. Live Strata Risk Assessment":
 
 
 # ==============================================================================
-# MODULE 3: MODEL EXPLAINABILITY & SHAP (SCIENTIFIC TRANSPARENCY)
+# MODULE 2: MODEL EXPLAINABILITY & SHAP (SCIENTIFIC TRANSPARENCY)
 # ==============================================================================
-elif nav_choice == "3. Model Explainability & SHAP":
+elif nav_choice == "2. Model Explainability & SHAP":
     st.markdown("### Scientific Explainability & SHAP Attributions")
     st.caption("Mathematical breakdown of tree model feature importance using Shapley Additive exPlanations.")
 
@@ -1876,9 +1879,9 @@ elif nav_choice == "3. Model Explainability & SHAP":
 
 
 # ==============================================================================
-# MODULE 4: HISTORICAL DGMS ANALYTICS
+# MODULE 3: HISTORICAL DGMS ANALYTICS
 # ==============================================================================
-elif nav_choice == "4. Historical DGMS Analytics":
+elif nav_choice == "3. Historical DGMS Analytics":
     st.markdown("### Official DGMS Ground Movement & Roof-Fall Exploratory Data Analysis (EDA)")
     st.caption("Canonical Geotechnical Intelligence: 41 Verified Fatal Inquiries (DGMS Code 0111: Fall of Roof, 2016–2022) + Century-Long Disaster Archive (1901–2022) · 100% Unhallucinated Empirical Data")
 
@@ -2544,9 +2547,9 @@ elif nav_choice == "4. Historical DGMS Analytics":
 
 
 # ==============================================================================
-# MODULE 5: ACCIDENT SIMILARITY SEARCH (FAISS)
+# MODULE 4: ACCIDENT SIMILARITY SEARCH (FAISS)
 # ==============================================================================
-elif nav_choice == "5. Accident Similarity Search":
+elif nav_choice == "4. Accident Similarity Search":
     st.markdown("### Precedent Similarity Search Engine (FAISS)")
     st.caption("Retrieve verbatim DGMS historical inquiries sharing geomechanical and operational characteristics.")
 
@@ -2585,9 +2588,9 @@ elif nav_choice == "5. Accident Similarity Search":
 
 
 # ==============================================================================
-# MODULE 6: REGULATORY RAG EVIDENCE & GEMINI SAFETY QA
+# MODULE 5: REGULATORY RAG EVIDENCE & GEMINI SAFETY QA
 # ==============================================================================
-elif nav_choice == "6. Regulatory RAG Evidence":
+elif nav_choice == "5. Regulatory RAG Evidence":
     st.markdown("### Statutory & Technical Regulation RAG Engine")
     st.caption("Vector retrieval across Coal Mines Regulations 2017, MMR 1961, DGMS Technical Circulars, and your uploaded documents.")
 
@@ -2767,9 +2770,9 @@ elif nav_choice == "6. Regulatory RAG Evidence":
 
 
 # ==============================================================================
-# MODULE 7: AI HELP — GEMINI-POWERED GENERAL ASSISTANT
+# MODULE 6: AI HELP — GEMINI-POWERED GENERAL ASSISTANT
 # ==============================================================================
-elif nav_choice == "7. AI Help":
+elif nav_choice == "6. AI Help":
     render_html("""
     <div style="background: linear-gradient(135deg, rgba(15, 23, 42, 0.9), rgba(10, 16, 32, 0.95)); border: 1px solid rgba(168, 85, 247, 0.3); border-radius: 14px; padding: 24px; margin-bottom: 20px; box-shadow: 0 12px 36px rgba(0, 0, 0, 0.4), 0 0 30px rgba(168, 85, 247, 0.1); position: relative; overflow: hidden;">
         <div style="position: absolute; top: 0; left: 0; right: 0; height: 2px; background: linear-gradient(90deg, #7C3AED, #A855F7, #C084FC, #A855F7, #7C3AED);"></div>
@@ -3025,9 +3028,9 @@ elif nav_choice == "7. AI Help":
 
 
 # ==============================================================================
-# MODULE 8: SAFETY POLICY & DATA DICTIONARY
+# MODULE 7: SAFETY POLICY & DATA DICTIONARY
 # ==============================================================================
-elif nav_choice == "8. Safety Policy & Data Dictionary":
+elif nav_choice == "7. Safety Policy & Data Dictionary":
     st.markdown("### Statutory Safety Policy & Geotechnical Data Dictionary")
 
     tab1, tab2 = st.tabs(["DGMS Safety Policy & Directives", "Data Dictionary (30 Canonical Fields)"])

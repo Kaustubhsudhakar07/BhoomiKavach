@@ -59,12 +59,13 @@ def auto_start_local_backend() -> bool:
         print(f"[BHOOmiKAVACH] Failed to launch background backend: {e}")
         return False
 
-    # Poll readiness (vector indices & model pre-warming takes 15-30s on cold start)
-    max_wait = 45
+    # Quick poll readiness (if uvicorn succeeds, great; otherwise in-memory client will take over instantly)
+    max_wait = 5
     start_time = time.time()
     while time.time() - start_time < max_wait:
-        time.sleep(1.5)
-        if is_backend_healthy(base_url, timeout=2.0):
+        time.sleep(1.0)
+        if is_backend_healthy(base_url, timeout=1.0):
             return True
 
     return False
+
