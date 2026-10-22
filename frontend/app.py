@@ -1144,7 +1144,7 @@ def format_bhoomi_plot(fig, height=320, title=None):
 # Ensure backend is active when running on Streamlit Cloud or standalone
 auto_start_local_backend()
 
-if "api_client" not in st.session_state:
+if "api_client" not in st.session_state or not hasattr(st.session_state.api_client, "is_remote"):
     st.session_state.api_client = BhoomiApiClient()
 api = st.session_state.api_client
 
