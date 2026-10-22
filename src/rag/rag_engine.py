@@ -175,6 +175,53 @@ class LocalRagEngine:
         return results
 
 
+    def add_documents(self, new_docs: List[Dict[str, Any]]) -> int:
+        """
+        Dynamically adds new documents to the existing FAISS RAG index at runtime.
+        Each doc should have: title, content, source, category, page (optional), topics (optional).
+        Returns the number of documents successfully added.
+        """
+        if not self.is_fitted:
+            if not self.load_index():
+                self.build_and_index_knowledge_base()
+
+        if not new_docs:
+            return 0
+
+        self._load_encoder()
+
+        # Prepare text for embedding
+        texts_to_embed = []
+        for d in new_docs:
+            d.setdefault("doc_id", f"USER-UPLOAD-{len(self.documents) + len(texts_to_embed) + 1}")
+            d.setdefault("category", "User Uploaded Document")
+            d.setdefault("page", "Uploaded")
+            d.setdefault("topics", "")
+            texts_to_embed.append(f"{d['title']}\n{d['content']}\nTopics: {d.get('topics', '')}")
+
+        if self.encoder is not None:
+            embeddings = self.encoder.encode(texts_to_embed, convert_to_numpy=True, show_progress_bar=False).astype("float32")
+            faiss.normalize_L2(embeddings)
+            self.index.add(embeddings)
+        else:
+            # TF-IDF fallback — need to re-fit, which is costly but functional
+            all_texts = [f"{d['title']}\n{d['content']}\nTopics: {d.get('topics', '')}" for d in self.documents] + texts_to_embed
+            tfidf_mat = self.tfidf.fit_transform(all_texts).toarray().astype("float32")
+            faiss.normalize_L2(tfidf_mat)
+            self.index = faiss.IndexFlatIP(tfidf_mat.shape[1])
+            self.index.add(tfidf_mat)
+
+        self.documents.extend(new_docs)
+
+        # Persist updated index and metadata
+        faiss.write_index(self.index, os.path.join(VECTOR_DIR, "rag_index.bin"))
+        with open(os.path.join(VECTOR_DIR, "rag_metadata.pkl"), "wb") as f:
+            pickle.dump(self.documents, f)
+
+        print(f"[RAG] Added {len(new_docs)} new documents. Total index size: {len(self.documents)}")
+        return len(new_docs)
+
+
 if __name__ == "__main__":
     rag = LocalRagEngine()
     rag.build_and_index_knowledge_base()

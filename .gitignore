@@ -7,6 +7,18 @@ __pycache__/
 env/
 venv/
 ENV/
+*.log
+
+# Streamlit
+.streamlit/secrets.toml
+
+# Internal Documentation & Study Notes
+understand.md
+detailed.md
+
+# Raw Data & Source PDFs (not needed for runtime)
+data/raw/
+*.pdf
 
 # Data & Models cache
 *.bin
@@ -18,6 +30,10 @@ ENV/
 !vector_store/faiss/*.bin
 !vector_store/faiss/*.pkl
 
+# SQLite temporary files
+*.db-journal
+*.sqlite-journal
+
 # Testing & Coverage
 .pytest_cache/
 .coverage
@@ -25,6 +41,7 @@ htmlcov/
 
 # Environment & IDE
 .env
+*.env
 .vscode/
 .idea/
 .DS_Store

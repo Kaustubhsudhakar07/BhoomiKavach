@@ -62,7 +62,7 @@ def get_gemini_client(api_key: Optional[str] = None):
     # Try google.generativeai SDK
     try:
         import google.generativeai as gai
-        gai.configure(api_key=key)
+        gai.configure(api_key=key, transport="rest")
         return "google.generativeai", gai
     except Exception:
         pass
@@ -93,7 +93,7 @@ def generate_gemini_safety_advisory(
     if not client:
         return None
 
-    model_name = os.getenv("GEMINI_MODEL", "gemini-2.5-flash")
+    model_name = os.getenv("GEMINI_MODEL", "gemini-3.8-flash")
 
     # Build contextual background prompt
     context_blocks = []
@@ -188,16 +188,21 @@ def generate_gemini_safety_advisory(
 
     except Exception as e:
         print(f"[WARN] Gemini safety advisory generation failed: {e}")
-        # Try fallback model if gemini-2.5-flash failed
-        if model_name != "gemini-1.5-flash":
-            try:
-                if sdk_type == "google.genai":
-                    fallback_resp = client.models.generate_content(
-                        model="gemini-1.5-flash",
-                        contents=full_prompt,
-                        config={"system_instruction": SYSTEM_SAFETY_PROMPT, "temperature": 0.2}
-                    )
-                    return fallback_resp.text.strip() + STATUTORY_DISCLAIMER
-            except Exception:
-                pass
+        # Try fallback models if primary model failed
+        for fallback_model in ["gemini-2.5-flash", "gemini-1.5-flash"]:
+            if model_name != fallback_model:
+                try:
+                    if sdk_type == "google.genai":
+                        fallback_resp = client.models.generate_content(
+                            model=fallback_model,
+                            contents=full_prompt,
+                            config={"system_instruction": SYSTEM_SAFETY_PROMPT, "temperature": 0.2}
+                        )
+                        return fallback_resp.text.strip() + STATUTORY_DISCLAIMER
+                    elif sdk_type == "google.generativeai":
+                        m = client.GenerativeModel(model_name=fallback_model, system_instruction=SYSTEM_SAFETY_PROMPT)
+                        resp = m.generate_content(full_prompt, generation_config={"temperature": 0.2})
+                        return resp.text.strip() + STATUTORY_DISCLAIMER
+                except Exception:
+                    continue
         return None

@@ -41,7 +41,7 @@ def get_system_health():
     # 4. Ollama check (Phase 31: check whether Ollama is available, graceful fallback)
     ollama_ok = False
     try:
-        resp = requests.get(f"{settings.OLLAMA_BASE_URL}/api/tags", timeout=1.0)
+        resp = requests.get(f"{settings.OLLAMA_BASE_URL}/api/tags", timeout=0.2)
         ollama_ok = (resp.status_code == 200)
     except Exception:
         ollama_ok = False

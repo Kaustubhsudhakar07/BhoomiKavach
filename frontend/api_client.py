@@ -5,14 +5,38 @@ Encapsulates all HTTP communication between Streamlit frontend and FastAPI backe
 No machine learning or heavy business logic is executed in Streamlit.
 """
 
+import os
 import requests
 from typing import Dict, Any, List, Optional
 
-DEFAULT_BACKEND_URL = "http://127.0.0.1:8000/api/v1"
+def resolve_backend_url() -> str:
+    """
+    Resolves the backend URL from Streamlit secrets, environment variables,
+    or falls back to localhost:8000.
+    """
+    # 1. Environment variable
+    env_url = os.environ.get("BACKEND_URL") or os.environ.get("BHOOMI_BACKEND_URL")
+    if env_url:
+        return env_url.rstrip("/")
+
+    # 2. Streamlit secrets (when deployed to Streamlit Cloud)
+    try:
+        import streamlit as st
+        if hasattr(st, "secrets") and "BACKEND_URL" in st.secrets:
+            return str(st.secrets["BACKEND_URL"]).rstrip("/")
+    except Exception:
+        pass
+
+    # 3. Default local development backend
+    return "http://127.0.0.1:8000/api/v1"
+
+DEFAULT_BACKEND_URL = resolve_backend_url()
 
 
 class BhoomiApiClient:
-    def __init__(self, base_url: str = DEFAULT_BACKEND_URL):
+    def __init__(self, base_url: Optional[str] = None):
+        if base_url is None:
+            base_url = resolve_backend_url()
         self.base_url = base_url.rstrip("/")
 
     def get_health(self) -> Dict[str, Any]:
@@ -81,5 +105,12 @@ class BhoomiApiClient:
 
     def get_audit_logs(self, limit: int = 50) -> Dict[str, Any]:
         resp = requests.get(f"{self.base_url}/audit/logs", params={"limit": limit}, timeout=10.0)
+        resp.raise_for_status()
+        return resp.json()
+
+    def upload_rag_document(self, file_name: str, file_bytes: bytes) -> Dict[str, Any]:
+        """Upload a file to be indexed into the RAG knowledge base."""
+        files = {"file": (file_name, file_bytes)}
+        resp = requests.post(f"{self.base_url}/rag/upload", files=files, timeout=120.0)
         resp.raise_for_status()
         return resp.json()

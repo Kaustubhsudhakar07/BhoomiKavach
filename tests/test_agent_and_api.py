@@ -91,3 +91,15 @@ def test_gemini_service():
     # If no key is set in test environment, should return False gracefully without crashing
     avail = is_gemini_available(None)
     assert isinstance(avail, bool)
+
+
+def test_api_rag_upload():
+    import io
+    sample_content = b"DGMS Special Guideline 2026: Mandatory use of continuous digital tell-tale monitors at all development junctions exceeding 4.2m width."
+    file_payload = {"file": ("dgms_test_circular_2026.txt", io.BytesIO(sample_content), "text/plain")}
+    response = client.post("/api/v1/rag/upload", files=file_payload)
+    assert response.status_code == 200
+    data = response.json()
+    assert data["status"] == "success"
+    assert data["chunks_added"] >= 1
+    assert "dgms_test_circular_2026.txt" in data["filename"]
